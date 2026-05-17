@@ -1,17 +1,102 @@
-# firstbutton
+# 🪡 첫 단추 (First Button)
 
-A new Flutter project.
+> **처음이 어렵지 않은 세상**을 만들어요 🌸  
+> 어색함이 설렘으로 바뀌는 그 순간, 첫 단추를 함께 꿰매요!
 
-## Getting Started
+<br>
 
-This project is a starting point for a Flutter application.
+## 🐶 프로젝트 소개
 
-A few resources to get you started if this is your first Flutter project:
+**첫 단추**는 첫 만남의 침묵을 없애주는 AI 디지털 명함 앱이에요.  
+NFC로 명함을 교환하고, AI가 두 사람의 키워드를 분석해서  
+자연스럽게 대화를 시작할 수 있는 질문을 추천해줘요!
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+학생부터 직장인까지, 누구나 부담 없이 나만의 명함을 만들고 교환할 수 있어요 🪄
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<br>
+
+## ✨ 주요 기능
+
+| 기능 | 설명 |
+|------|------|
+| 📇 **명함 교환** | NFC 1:1 교환 방식으로 명함 전송 or 링크로 단체 공유  |
+| 🔄 **카드 뒤집기** | 탭하면 상대방 키워드 확인 |
+| 🪡 **단추 버튼** | 지갑에서 명함 혹은 지갑을 골라서 AI 질문 생성 |
+| 💊 **캡슐 선택** | 공통 관심사 / 커리어 / 취미 중 주제 선택 |
+| 🤖 **AI 질문 추천** | Claude AI가 두 사람의 키워드로 대화 질문 생성 |
+| 🎨 **명함 만들기** | 직접 꾸미기 or AI로 빠르게 생성 |
+| 👝 **지갑** | 교환한 명함을 폴더별로 보관 & 메모 |
+
+<br>
+
+## 💡 이런 문제를 해결해요
+
+🚫 네트워킹, 동아리, 팀빌딩 행사에서 첫 말 꺼내기가 너무 어려워요  
+🚫 기존 명함은 연락처만 있어서 대화 시작점이 없어요  
+🚫 학생, 사회초년생은 명함 자체가 없어요  
+
+✅ 키워드 기반 AI 질문으로 자연스러운 대화 시작  
+✅ 취미, 관심사, MBTI 등 나만의 개성을 담은 명함  
+✅ 누구나 5분 안에 가볍게 만드는 디지털 명함
+
+<br>
+
+## 🛠 기술 스택
+
+| 분야 | 기술 |
+|------|------|
+| 앱 | Flutter |
+| AI | Claude API (Anthropic) |
+| 개발 방식 | 🤝 바이브코딩 with Claude |
+
+<br>
+
+## 📱 화면 흐름
+
+🏠 홈  
+├── 명함 탭 → 키워드 뒷면 보기  
+├── 명함 꾹 누르기 → NFC 교환 시작  
+│ ↓  
+│ 📶 로딩 화면 → 상대방 명함 구경 + 탭하면 키워드  
+│ ↓  
+│ 💊 캡슐 선택 → 공통관심사 / 커리어 / 취미  
+│ ↓  
+│ ✨ AI 질문 추천  
+│  
+├── 새로운 명함 추가하기  
+│ ↓  
+│ 1단계: 직접 만들기 / AI로 만들기  
+│ 2단계: 명함 꾸미기  
+│ 3단계: 키워드 작성  
+│  
+└── 👝 지갑 → 폴더별 명함 보관
+<br>
+
+## 🌱 개발 스토리
+
+> Flutter 처음 써봤어요 😅  
+> Claude랑 바이브코딩으로 처음부터 끝까지 같이 만든 프로젝트예요!  
+> **멋사 14기 아이디어톤** 시연을 위해 제작했습니다 🦁
+
+<br>
+
+## 🗂 프로젝트 구조
+
+📁 lib/  
+├── main.dart  
+└── 📁 screens/  
+　　├── home_screen.dart　　　# 홈  
+　　├── loading_screen.dart　 # NFC 교환 + 로딩  
+　　├── capsule_screen.dart　 # 캡슐 선택  
+　　├── result_screen.dart　　# AI 질문 추천  
+　　├── add_card_screen.dart　# 명함 만들기  
+　　└── wallet_screen.dart　　# 지갑
+
+<br>
+
+---
+
+<p align="center">
+  🪡 멋사 14기 아이디어톤 | 2026 <br>
+  <i>"우리 함께 첫 단추를 꿰매보아요!"</i>
+</p>
