@@ -529,113 +529,23 @@ class _FlipCardState extends State<_FlipCard>
   }
 
   Widget _buildFront() {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFFF3F4F6)),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.pink.withOpacity(0.08),
-              blurRadius: 16,
-              offset: const Offset(0, 4)),
-        ],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(children: [
-                    const Text('얀',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold)),
-                    const SizedBox(width: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFFF8C42),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: const Text('멋사 14기',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold)),
-                    ),
-                  ]),
-                  const SizedBox(height: 6),
-                  const Text('백엔드 개발자',
-                      style: TextStyle(fontSize: 13, color: Colors.grey)),
-                  const Text('한국항공대학교 소프트웨어학과 24학번',
-                      style: TextStyle(fontSize: 11, color: Colors.grey)),
-                  const SizedBox(height: 12),
-                  const Text('탭해서 키워드 보기 👆',
-                      style: TextStyle(fontSize: 11, color: Colors.grey)),
-                ],
-              ),
-            ),
-            Image.asset('assets/image/dog.png', width: 70),
-          ],
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.asset(
+        'assets/image/card_front.png',
+        width: double.infinity,
+        fit: BoxFit.cover,
       ),
     );
   }
 
   Widget _buildBack() {
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: const Color(0xFFFDF2F8),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: const Color(0xFFFBCFE8)),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.pink.withOpacity(0.08),
-              blurRadius: 16,
-              offset: const Offset(0, 4)),
-        ],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text('키워드',
-                style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFFE75480))),
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                'INFP', '가나디', '백엔드 개발',
-                'Java', '새벽 코딩', '멋사 14기', '요즘 이자반 봄'
-              ].map((k) => Container(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 10, vertical: 5),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: const Color(0xFFFBCFE8)),
-                ),
-                child: Text(k,
-                    style: const TextStyle(
-                        fontSize: 12, color: Color(0xFFE75480))),
-              )).toList(),
-            ),
-            const SizedBox(height: 12),
-            const Text('꾹 누르면 명함 공유하기',
-                style: TextStyle(fontSize: 11, color: Colors.grey)),
-          ],
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.asset(
+        'assets/image/card_back.png',
+        width: double.infinity,
+        fit: BoxFit.cover,
       ),
     );
   }

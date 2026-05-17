@@ -239,60 +239,12 @@ class _LoadingScreenState extends State<LoadingScreen>
   }
 
   Widget _buildMyCard() {
-    return Container(
-      width: 240,
-      height: 150,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.pink.withOpacity(0.12),
-              blurRadius: 20,
-              offset: const Offset(0, 4)),
-        ],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(18),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(children: [
-              const Text('안',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              const SizedBox(width: 8),
-              Container(
-                padding:
-                const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                decoration: BoxDecoration(
-                    color: const Color(0xFFFF8C42),
-                    borderRadius: BorderRadius.circular(20)),
-                child: const Text('멋사 14기',
-                    style: TextStyle(color: Colors.white, fontSize: 10)),
-              ),
-            ]),
-            const SizedBox(height: 4),
-            const Text('백엔드 개발자',
-                style: TextStyle(fontSize: 12, color: Colors.grey)),
-            const Text('한국항공대학교 소프트웨어학과 24학번',
-                style: TextStyle(fontSize: 11, color: Colors.grey)),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 6,
-              runSpacing: 4,
-              children: ['백엔드', 'Java', '커피'].map((k) => Container(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(
-                    color: const Color(0xFFFDF2F8),
-                    borderRadius: BorderRadius.circular(20)),
-                child: Text(k,
-                    style: const TextStyle(
-                        fontSize: 10, color: Color(0xFFE75480))),
-              )).toList(),
-            ),
-          ],
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.asset(
+        'assets/image/card_front.png',
+        width: 240,
+        fit: BoxFit.cover,
       ),
     );
   }
